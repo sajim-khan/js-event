@@ -1,6 +1,9 @@
-console.log("Welcome to js dom events");
+// option 1
+//<button onclick="console.log('i am clicked')">Click me</button>
 
-// Option 2
+// Option 2: add onclick function on the html element
+
+//<button onclick="makeRed()">Make red</button>
 function makeRed() {
     document.body.style.backgroundColor ='red'
 }
@@ -18,3 +21,21 @@ makePurpleButton.onclick = function makePurple() {
     document.body.style.backgroundColor ='purple'
 }
 
+//option 4: 
+const makePinkButton = document.getElementById("make-pink");
+makePinkButton.addEventListener('click', makePink);
+
+function makePink() {
+    document.body.style.backgroundColor ='pink'
+}
+
+// another option 4
+const makeGreenButton = document.getElementById("make-green");
+makeGreenButton.addEventListener("click", function makeGreen (){
+    document.body.style.backgroundColor ='green';
+})
+
+// Option mostly used
+document.getElementById('make-orange').addEventListener('click', function() {
+    document.body.style.backgroundColor = 'orange';
+})
