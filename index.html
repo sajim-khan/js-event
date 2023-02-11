@@ -10,16 +10,15 @@
     <h1>Dom special events</h1>
     <button onclick="console.log(5)">Click me</button>
     <button onclick="console.log('i am clicked')">Click me</button>
+    <!-- option 2 -->
     <button onclick="makeRed()">Make red</button>
+    <!-- option 3 -->
     <button id="make-blue">Make blue</button>
+    <button id="make-purple">Make Purple</button>
+    
     <script src="js/events.js"></script>
     <script>
-        const makeBlueButton = document.getElementById("make-blue");
-        makeBlueButton.onclick = makeBlue;
         
-        function makeBlue() {
-            document.body.style.backgroundColor ='blue'
-        }
         
     </script>
 </body>
