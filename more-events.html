@@ -9,7 +9,28 @@
 <body>
     <h1>Explore more events</h1>
     <button id="btn-more">Events</button>
+    <input id="text-field" type="text">
     <script> 
+        
+        //document.getElementById('text-field').addEventListener('focus', function() {
+        //    console.log('Are you sure')
+        //})
+        //document.getElementById('text-field').addEventListener('blur', function() {
+        //    console.log('Are you sure ??')
+        //})
+        
+        //document.getElementById('text-field').addEventListener('keydown', function(event) {
+        //    console.log(event.target.value)
+        //})
+        
+        //document.getElementById('text-field').addEventListener('keypress', function(event) {
+        //    console.log(event.target.value)
+        //})
+        
+        document.getElementById('text-field').addEventListener('keyup', function(event) {
+            console.log(event.target.value)
+        })
+    
         document.getElementById('btn-more').addEventListener("mouseenter", function() {
             console.log("jd")
         });
