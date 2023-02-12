@@ -8,6 +8,11 @@
 </head>
 <body>
     <h1>Js event handler summary</h1>
+    <p id="input-text-display">Default Text</p>
+    <input id="input-field" type="text">
+    <button id="btn-update">Update</button>
+    
+    
     <h3 id="my-name">My Name</h3>
     <button onclick="myName()">Click for know the name</button>
     <button id="event-listener">Handle event by addEventListener</button>
@@ -21,6 +26,16 @@
             const myName = document.getElementById('my-name');
             myName.innerHTML = 'My name is Shahadat Hossain Sajim'
         })
+        
+        //Option 2 recap
+        document.getElementById('btn-update').addEventListener('click', function() {
+            const inputField = document.getElementById('input-field')    ;
+            const inputText = inputField.value ;
+            
+            const p = document.getElementById('input-text-display');
+            p.innerText = inputText;
+            inputField.value = ''
+        });
     </script>
 </body>
 </html>
