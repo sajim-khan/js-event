@@ -8,9 +8,38 @@
 </head>
 <body>
     <h1>Add your comment</h1>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente voluptate deserunt cupiditate quam alias qui nostrum quod laborum fugit fuga nihil accusantium laboriosam in maiores officia delectus perspiciatis expedita necessitatibus minima, optio molestias consequatur asperiores explicabo? Quisquam sunt ratione laborum nesciunt voluptates voluptate! Harum sed placeat voluptate temporibus nemo facere.</p>
+    <div id="comment-container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit inventore fuga est alias? Cum aperiam culpa, voluptatibus laboriosam, velit animi praesentium facere corporis ipsa neque quisquam eos eius, natus dolor? Sunt atque, quia nemo praesentium veritatis amet eos? At labore, ullam corrupti enim quaerat molestias quo explicabo asperiores obcaecati tempore.</p>
+        <p>Eaque quia recusandae molestias ut, soluta dicta cum, vel harum accusantium quisquam, earum possimus distinctio similique libero autem nesciunt aspernatur vitae. Aspernatur consectetur perspiciatis quidem quae vel tenetur eligendi eaque commodi at, qui veniam suscipit reiciendis voluptatem maiores blanditiis. Natus eos saepe vitae laudantium consectetur provident illo at sit placeat.</p>
+        
+        <p>Dignissimos obcaecati repellat beatae maxime amet reiciendis officia molestiae sapiente. Iusto architecto alias fuga accusantium nam inventore laudantium ullam error praesentium. Numquam laborum eligendi totam quia assumenda quidem officia cum? Perspiciatis velit nam veniam quasi iste! In alias tenetur facere adipisci earum dolores cum? Possimus sint facere tempora obcaecati perferendis!</p>
+    </div>
+    <div>
+        <textarea name="" id="new-comment" cols="40" rows="5"></textarea>
+        <br><button id="btn-post">Post</button>
+    </div>
     
-    <p>Autem incidunt cum maxime adipisci eveniet sunt et nesciunt illo suscipit atque molestias, harum eos tempore perferendis odit soluta accusamus sint nisi sit repudiandae, quo temporibus? Inventore saepe, eveniet accusamus hic velit modi adipisci provident repellat itaque! Voluptate animi totam tempore maxime maiores ratione, molestias quibusdam blanditiis illum fuga obcaecati.</p>
-    <p>Animi natus soluta tenetur. Sequi quos repellat alias aspernatur dolorum quibusdam odio vero reprehenderit placeat aliquam iusto at assumenda molestias magni fugit fugiat voluptatibus beatae, impedit minus in? Ab minima fuga, ipsam neque omnis, explicabo molestias vero eius expedita iste accusantium ea, velit blanditiis voluptate. Non aut ex enim iure.</p>
+    <script>
+        // step 1;: add event listener to the post button
+        document.getElementById("btn-post").addEventListener("click", function(){
+           // step 2:get the comment inside the text area
+           const commentBox = document.getElementById("new-comment");
+           const comment = commentBox.value;
+           
+           //step-3 :  set the comment inside the container
+           // 1. get the comment container
+           const commentContainer = document.getElementById("comment-container");
+           // 2. create a new element (p tag)
+           const p = document.createElement("p");
+           // 3. set the text of the comment as innertext of the p tag
+           p.innerText = comment;
+           // 4. add the p tag using append child
+           commentContainer.appendChild(p);
+           
+           // step-4 : clear the textarea( text area is in commentbox )
+           commentBox.value = '';
+           
+        })
+    </script>
 </body>
 </html>
