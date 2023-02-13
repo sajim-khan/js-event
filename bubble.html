@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Bubble</title>
     <style>
+        #item-2{
+            border : 1px solid black;
+        }
         ul{
             border : 2px solid tomato;
         }
@@ -29,8 +32,10 @@
         </ul>
     </section>
     <script>
-        document.getElementById('item-2').addEventListener('click', function() {
-            console.log('item 2 clicked')
+        document.getElementById('item-2').addEventListener('click', function(event) {
+            console.log('item 2 clicked');
+            event.stopPropagation(); //stop propagation
+            //event.stopImmediatePropagation(); //stopImmediatePropagation
         })
         document.getElementById('list-ul').addEventListener('click', function() {
             console.log('list ul clicked')
